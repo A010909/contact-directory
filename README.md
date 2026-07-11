@@ -4,9 +4,14 @@ A contact management system written in C.
 
 ---
 
-## 🏗️ Project Architecture & Application Flow
+## 🏗️ Project Features
 
-The application manages data dynamically in memory during runtime and will eventually persist it to a text-based database.
+- [x] Create contact
+- [ ] Delete Contact
+- [x] Show all Contacts
+- [ ] Search contact
+- [ ] Favorites
+- [ ] Sort by date, Sort by Alphabet (under planning)
 
 ### 🔄 Execution Lifecycle
 
@@ -40,6 +45,7 @@ The application manages data dynamically in memory during runtime and will event
 - [ ] Traverse the linked list and write data sequentially using `fprintf()`.
 - [ ] Implement a `load_contacts()` function using `fopen("contacts.txt", "r")`.
 - [ ] Parse lines from the file, convert them to structs, and reconstruct the list on startup.
+- [ ] Create A Makefile to compile multiple files at one go.
 
 ### ⏳ Phase 4: Memory Management & Advanced Features
 
@@ -47,6 +53,13 @@ The application manages data dynamically in memory during runtime and will event
 - [ ] Add a "Search Contact" feature 
 - [ ] Add a "Delete Contact" feature 
 - [ ] Add a "Sort" feature 
+
+---
+
+## ⭐ Points to keep in check 
+
+- [ ] **User Experience:** The list of contacts will be shown at very first when starting the programme, then the other features will be shoen as an option.
+- [ ] **First time running:** Will create a file automatically to store the data in the root directory and the user will not have any interactions to do with this file.
 
 ---
 
@@ -67,4 +80,4 @@ contacts_directory/
 
 ## 🚀 Final Note 
 
-Currently it is in development phase so it may not meet up to its readme documents but it eventually will. 
+Currently it is in development phase so it may not meet up to its readme documents but it eventually will. 🙏
