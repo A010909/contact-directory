@@ -1,6 +1,6 @@
 # 📇 Terminal Contact Directory
 
-A lightweight, persistent contact management system written in C. This project serves as a foundational exercise bridging the gap between basic syntax and applied computer science concepts, specifically memory management, data structures, and file I/O operations.
+A contact management system written in C. 
 
 ---
 
@@ -14,7 +14,6 @@ The application manages data dynamically in memory during runtime and will event
 2. **Load Data (Upcoming Phase):** Reads `contacts.txt`, parses the stored text, and rebuilds the linked list in memory.
 3. **Interactive Menu Loop:**
    - Prompt user for choice (Add, View, Exit).
-   - Capture input securely, stripping trailing newlines.
    - Execute corresponding linked-list operations.
 4. **Save Data (Upcoming Phase):** Upon choosing "Exit", traverses the linked list and writes all node data back to `contacts.txt`.
 5. **Memory Cleanup (Upcoming Phase):** Traverses the list one final time, calling `free()` on every node to return memory to the OS.
@@ -23,8 +22,6 @@ The application manages data dynamically in memory during runtime and will event
 
 ## 🗺️ Development Roadmap
 
-The project is structured into sequential phases to isolate complexity and ensure stability at every level.
-
 ### ✅ Phase 1: Data Structures & Core Logic (Completed)
 
 - [x] Define the `card` struct (Name, Phone, `*next` pointer).
@@ -32,12 +29,10 @@ The project is structured into sequential phases to isolate complexity and ensur
 - [x] Build traversal logic to append nodes safely to the end of the list.
 - [x] Build traversal logic to read and display all nodes.
 
-### ✅ Phase 2: User Interface & Input Sanitization (Completed)
+### ✅ Phase 2: User Interface (Completed)
 
 - [x] Create an interactive `do-while` menu loop.
 - [x] Implement secure string reading using `fgets()` instead of `scanf()`.
-- [x] Sanitize strings by stripping newline characters (`strcspn`).
-- [x] Prevent input buffer skipping by handling lingering carriage returns (`getchar()`).
 
 ### ⏳ Phase 3: Data Persistence (Next Step)
 
@@ -49,8 +44,9 @@ The project is structured into sequential phases to isolate complexity and ensur
 ### ⏳ Phase 4: Memory Management & Advanced Features
 
 - [ ] Implement `free_all_nodes()` to release heap memory before program termination (preventing memory leaks).
-- [ ] **Bonus:** Add a "Search Contact" feature (linear search string comparison).
-- [ ] **Bonus:** Add a "Delete Contact" feature (complex pointer reassignment).
+- [ ] Add a "Search Contact" feature 
+- [ ] Add a "Delete Contact" feature 
+- [ ] Add a "Sort" feature 
 
 ---
 
@@ -69,17 +65,6 @@ contacts_directory/
 └── contacts.txt     # (Generated dynamically) The database file
 ```
 
-## 🚀 Compilation & Execution
+## 🚀 Final Note 
 
-_(For the current single-file version)_
-
-```bash
-# Compile the program
-gcc main.c -o contacts
-
-# Run the executable
-./contacts
-```
-
-README.md
-Displaying README.md.
+Currently it is in development phase so it may not meet up to its readme documents but it eventually will. 
