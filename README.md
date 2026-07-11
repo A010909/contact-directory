@@ -1,6 +1,6 @@
 # 📇 Terminal Contact Directory
 
-A contact management system written in C. 
+A contact management system written in C.
 
 ---
 
@@ -45,20 +45,20 @@ A contact management system written in C.
 - [ ] Traverse the linked list and write data sequentially using `fprintf()`.
 - [ ] Implement a `load_contacts()` function using `fopen("contacts.txt", "r")`.
 - [ ] Parse lines from the file, convert them to structs, and reconstruct the list on startup.
-- [ ] Create A Makefile to compile multiple files at one go.
+- [x] Create A Makefile to compile multiple files at one go.
 
 ### ⏳ Phase 4: Memory Management & Advanced Features
 
 - [ ] Implement `free_all_nodes()` to release heap memory before program termination (preventing memory leaks).
-- [ ] Add a "Search Contact" feature 
-- [ ] Add a "Delete Contact" feature 
-- [ ] Add a "Sort" feature 
+- [ ] Add a "Search Contact" feature
+- [ ] Add a "Delete Contact" feature
+- [ ] Add a "Sort" feature
 
 ---
 
-## ⭐ Points to keep in check 
+## ⭐ Points to keep in check
 
-- [ ] **User Experience:** The list of contacts will be shown at very first when starting the programme, then the other features will be shoen as an option.
+- [x] **User Experience:** The list of contacts will be shown at very first when starting the programme, then the other features will be shoen as an option.
 - [ ] **First time running:** Will create a file automatically to store the data in the root directory and the user will not have any interactions to do with this file.
 
 ---
@@ -70,14 +70,14 @@ While currently running as a single `main.c` file, the architecture should event
 ```text
 contacts_directory/
 │
-├── main.c           # Application entry point and UI loop
-├── list_ops.c       # Implementations of create(), display(), free()
-├── list_ops.h       # Struct definitions and function prototypes
+├── main.c           # Application entry point and UI loop ✅
+├── list_ops.c       # Implementations of create(), display(), free() ✅
+├── list_ops.h       # Struct definitions and function prototypes ✅
 ├── file_io.c        # Implementations for saving and loading data
 ├── file_io.h        # File operations function prototypes
 └── contacts.txt     # (Generated dynamically) The database file
 ```
 
-## 🚀 Final Note 
+## 🚀 Final Note
 
 Currently it is in development phase so it may not meet up to its readme documents but it eventually will. 🙏
