@@ -54,6 +54,7 @@ int main()
         case 3: // Save and Exit from programme
             save(root);
             printf("Contacts saved successfully. Exiting...\n");
+            free_memory(root);
             exit(0);
             break;
         default: // Invalud Input

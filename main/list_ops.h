@@ -24,4 +24,7 @@ card *load(card *root);
 // Saves new contacts from the linked list
 card *save(card *root);
 
+// Fress Allocated memory from malloc
+void free_memory(card *root);
+
 #endif

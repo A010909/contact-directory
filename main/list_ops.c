@@ -88,3 +88,15 @@ card *save(card *root)
     fclose(file);
     return root;
 }
+
+// Fress Allocated memory from malloc
+void free_memory(card *root)
+{
+    while (root != NULL)
+    {
+        card *cur = root;
+        root = root->next;
+        free(cur);
+    }
+    return;
+}
