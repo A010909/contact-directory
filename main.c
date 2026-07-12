@@ -3,12 +3,18 @@
 #include <string.h>
 #include "list_ops.h"
 
+// Phone digits
+#define DIGITS 12
+
 int main()
 {
     char name[30];
-    char phone[11];
+    char phone[DIGITS];
     card *root = NULL;
     int choice;
+
+    // Load all the contacts
+    root = load(root);
 
     // Displaying all contacts
     display(root);
@@ -33,6 +39,9 @@ int main()
                 phone[strcspn(phone, "\n")] = '\0'; // Replaces the newline with a null terminator
 
                 root = create(root, name, phone);
+
+                // Confirmation text
+                printf("Contact Added Successfully\n");
 
                 printf("Do you want to enter more contacts?(1/0) : ");
                 scanf("%d", &choice);
