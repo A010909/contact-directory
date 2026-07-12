@@ -100,3 +100,20 @@ void free_memory(card *root)
     }
     return;
 }
+
+// Search Contact by name (linear)
+void search_by_name(card *root, char name[30])
+{
+    card *ptr = root;
+
+    while (ptr != NULL)
+    {
+        if (strcmp(name, ptr->name) == 0)
+        {
+            printf("---Contact Found---\nName : %s\nPhone : %s\n", ptr->name, ptr->phone);
+            return;
+        }
+        ptr = ptr->next;
+    }
+    printf("No Contacts found");
+}

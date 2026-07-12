@@ -22,7 +22,7 @@ int main()
     // Menu
     do
     {
-        printf("\n1.New contact\n2.Contacts list\n3.Save and Exit\nEnter your choice : ");
+        printf("\n1.New contact\n2.Contacts list\n3.Search contact by name\n4.Save and Exit\nEnter your choice : ");
         scanf("%d", &choice);
         getchar();
         switch (choice)
@@ -51,7 +51,19 @@ int main()
         case 2: // Display the cards
             display(root);
             break;
-        case 3: // Save and Exit from programme
+        case 3:
+            if (root == NULL)
+                printf("No Contacts");
+            else
+            {
+                char s_name[30];
+                printf("Name : ");
+                fgets(s_name, sizeof(s_name), stdin);
+                s_name[strcspn(s_name, "\n")] = '\0'; // Replaces the newline with a null terminator
+                search_by_name(root, s_name);
+            }
+            break;
+        case 4: // Save and Exit from programme
             save(root);
             printf("Contacts saved successfully. Exiting...\n");
             free_memory(root);

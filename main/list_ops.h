@@ -27,4 +27,7 @@ card *save(card *root);
 // Fress Allocated memory from malloc
 void free_memory(card *root);
 
+// Search Contact by name (linear)
+void search_by_name(card *root, char name[30]);
+
 #endif
