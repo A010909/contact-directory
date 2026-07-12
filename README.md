@@ -8,20 +8,10 @@ A contact management system written in C.
 
 - [x] Create contact
 - [ ] Delete Contact
+- [ ] Edit Contact
 - [x] Show all Contacts
-- [ ] Search contact
-- [ ] Favorites
-- [ ] Sort by date, Sort by Alphabet (under planning)
-
-### 🔄 Execution Lifecycle
-
-1. **Initialization:** Program starts and pointers are initialized (`root = NULL`).
-2. **Load Data (Upcoming Phase):** Reads `contacts.txt`, parses the stored text, and rebuilds the linked list in memory.
-3. **Interactive Menu Loop:**
-   - Prompt user for choice (Add, View, Exit).
-   - Execute corresponding linked-list operations.
-4. **Save Data (Upcoming Phase):** Upon choosing "Exit", traverses the linked list and writes all node data back to `contacts.txt`.
-5. **Memory Cleanup (Upcoming Phase):** Traverses the list one final time, calling `free()` on every node to return memory to the OS.
+- [x] Search contact by name
+- [ ] Export to CSV
 
 ---
 
@@ -49,10 +39,11 @@ A contact management system written in C.
 
 ### ⏳ Phase 4: Memory Management & Advanced Features
 
-- [ ] Implement `free_all_nodes()` to release heap memory before program termination (preventing memory leaks).
-- [ ] Add a "Search Contact" feature
+- [x] Implement `free_all_nodes()` to release heap memory before program termination (preventing memory leaks).
+- [x] Add a "Search by name" feature
 - [ ] Add a "Delete Contact" feature
-- [ ] Add a "Sort" feature
+- [ ] Add a "Edit Contact" feature
+- [ ] Add a "Export to CSV" feature
 
 ---
 
@@ -60,6 +51,9 @@ A contact management system written in C.
 
 - [x] **User Experience:** The list of contacts will be shown at very first when starting the programme, then the other features will be shoen as an option.
 - [x] **First time running:** Will create a file automatically to store the data in the root directory and the user will not have any interactions to do with this file.
+- [ ] **Duplicate Prevention:** No Contact will be accepted with same name or phone number.
+- [ ] **Phone Number Validation:** If user gives text in place of phone number, it should detect it.
+- [ ] **Total Count:** Always show total number of contacts on top
 
 ---
 
