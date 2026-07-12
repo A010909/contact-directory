@@ -39,12 +39,12 @@ A contact management system written in C.
 - [x] Create an interactive `do-while` menu loop.
 - [x] Implement secure string reading using `fgets()` instead of `scanf()`.
 
-### ⏳ Phase 3: Data Persistence (Next Step)
+### ✅ Phase 3: Data Persistence (Next Step)
 
-- [ ] Implement a `save_contacts()` function using `fopen("contacts.txt", "w")`.
-- [ ] Traverse the linked list and write data sequentially using `fprintf()`.
-- [ ] Implement a `load_contacts()` function using `fopen("contacts.txt", "r")`.
-- [ ] Parse lines from the file, convert them to structs, and reconstruct the list on startup.
+- [x] Implement a `save()` function
+- [x] Traverse the linked list and write data sequentially
+- [x] Implement a `load()` function using
+- [x] Parse lines from the file, convert them to structs, and reconstruct the list on startup.
 - [x] Create A Makefile to compile multiple files at one go.
 
 ### ⏳ Phase 4: Memory Management & Advanced Features
@@ -56,10 +56,10 @@ A contact management system written in C.
 
 ---
 
-## ⭐ Points to keep in check
+## ✅ Points to keep in check
 
 - [x] **User Experience:** The list of contacts will be shown at very first when starting the programme, then the other features will be shoen as an option.
-- [ ] **First time running:** Will create a file automatically to store the data in the root directory and the user will not have any interactions to do with this file.
+- [x] **First time running:** Will create a file automatically to store the data in the root directory and the user will not have any interactions to do with this file.
 
 ---
 
@@ -73,9 +73,9 @@ contacts_directory/
 ├── main.c           # Application entry point and UI loop ✅
 ├── list_ops.c       # Implementations of create(), display(), free() ✅
 ├── list_ops.h       # Struct definitions and function prototypes ✅
-├── file_io.c        # Implementations for saving and loading data
-├── file_io.h        # File operations function prototypes
-└── contacts.txt     # (Generated dynamically) The database file
+├── Makefile         # Compile multiple files at once ✅
+├── README.md        # Documentation ✅
+└── contacts.txt     # (Generated dynamically) The database file ✅
 ```
 
 ## 🚀 Final Note
