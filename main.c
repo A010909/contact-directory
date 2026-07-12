@@ -22,7 +22,7 @@ int main()
     // Menu
     do
     {
-        printf("\n1.New contact\n2.Contacts list\n3.Exit\nEnter your choice : ");
+        printf("\n1.New contact\n2.Contacts list\n3.Save and Exit\nEnter your choice : ");
         scanf("%d", &choice);
         getchar();
         switch (choice)
@@ -51,7 +51,9 @@ int main()
         case 2: // Display the cards
             display(root);
             break;
-        case 3: // Exit from programme
+        case 3: // Save and Exit from programme
+            save(root);
+            printf("Contacts saved successfully. Exiting...\n");
             exit(0);
             break;
         default: // Invalud Input

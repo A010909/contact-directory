@@ -21,4 +21,7 @@ void display(card *root);
 // Load contacts if exist, create if not
 card *load(card *root);
 
+// Saves new contacts from the linked list
+card *save(card *root);
+
 #endif

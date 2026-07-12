@@ -65,3 +65,26 @@ card *load(card *root)
         return root;
     }
 }
+
+card *save(card *root)
+{
+    FILE *file = fopen("contacts.txt", "w");
+
+    // Ensure the OS granted write permission
+    if (file == NULL)
+    {
+        printf("Error: Could not save contacts.\n");
+        return root;
+    }
+    else
+    {
+        card *ptr = root;
+        while (ptr != NULL)
+        {
+            fprintf(file, "%s|%s\n", ptr->name, ptr->phone);
+            ptr = ptr->next;
+        }
+    }
+    fclose(file);
+    return root;
+}
