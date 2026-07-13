@@ -57,21 +57,6 @@ A contact management system written in C.
 
 ---
 
-## 📂 Recommended File Structure
-
-While currently running as a single `main.c` file, the architecture should eventually evolve into a multi-file project for better maintainability:
-
-```text
-contacts_directory/
-│
-├── main.c           # Application entry point and UI loop ✅
-├── list_ops.c       # Implementations of create(), display(), free() ✅
-├── list_ops.h       # Struct definitions and function prototypes ✅
-├── Makefile         # Compile multiple files at once ✅
-├── README.md        # Documentation ✅
-└── contacts.txt     # (Generated dynamically) The database file ✅
-```
-
 ## 🚀 Final Note
 
 Currently it is in development phase so it may not meet up to its readme documents but it eventually will. 🙏
