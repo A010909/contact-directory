@@ -117,3 +117,34 @@ void search_by_name(card *root, char name[30])
     }
     printf("No Contacts found");
 }
+
+// Delete a contact
+card *delete(card *root, char name[30])
+{
+    card *temp = root, *ptr = root;
+
+    if (strcmp(name, root->name) == 0)
+    {
+        root = root->next;
+        free(ptr);
+        return root;
+    }
+
+    while (temp != NULL)
+    {
+        if (strcmp(name, temp->name) == 0)
+        {
+            // Delete contact;
+            ptr->next = temp->next;
+            free(temp);
+            return root;
+        }
+        else
+        {
+            ptr = temp;
+            temp = temp->next;
+        }
+    }
+    printf("Contact not found");
+    return root;
+}

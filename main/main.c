@@ -22,7 +22,7 @@ int main()
     // Menu
     do
     {
-        printf("\n1.New contact\n2.Contacts list\n3.Search contact by name\n4.Save and Exit\nEnter your choice : ");
+        printf("\n1.New contact\n2.Delete Contact\n3.Contacts list\n4.Search contact by name\n5.Save and Exit\nEnter your choice : ");
         scanf("%d", &choice);
         getchar();
         switch (choice)
@@ -48,10 +48,22 @@ int main()
                 getchar(); // Removes the \n character typed from choice entering
             } while (choice == 1);
             break;
-        case 2: // Display the cards
+        case 2:
+            if (root == NULL)
+                printf("No Contacts");
+            else
+            {
+                char d_name[30];
+                printf("Name : ");
+                fgets(d_name, sizeof(d_name), stdin);
+                d_name[strcspn(d_name, "\n")] = '\0'; // Replaces the newline with a null terminator
+                root = delete(root, d_name);
+            }
+            break;
+        case 3: // Display the cards
             display(root);
             break;
-        case 3:
+        case 4:
             if (root == NULL)
                 printf("No Contacts");
             else
@@ -63,7 +75,7 @@ int main()
                 search_by_name(root, s_name);
             }
             break;
-        case 4: // Save and Exit from programme
+        case 5: // Save and Exit from programme
             save(root);
             printf("Contacts saved successfully. Exiting...\n");
             free_memory(root);

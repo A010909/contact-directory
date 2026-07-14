@@ -18,16 +18,19 @@ card *create(card *root, char name[30], char phone[DIGITS]);
 // Display Contacts prototype
 void display(card *root);
 
-// Load contacts if exist, create if not
+// Load contacts if exist, creates if not
 card *load(card *root);
 
 // Saves new contacts from the linked list
 card *save(card *root);
 
-// Fress Allocated memory from malloc
+// Free Allocated memory from malloc
 void free_memory(card *root);
 
 // Search Contact by name (linear)
 void search_by_name(card *root, char name[30]);
+
+// Delete a contact using their name
+card *delete (card *root, char name[30]);
 
 #endif
