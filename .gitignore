@@ -1,2 +1,7 @@
 *.exe
 *.txt
+*.out
+a.out
+Contacts
+*.o
+*~

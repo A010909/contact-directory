@@ -4,7 +4,7 @@ CFLAGS = -Wall -g
 
 TARGET = Contacts
 
-SOURCES = main\main.c main\list_ops.c 
+SOURCES = main/main.c main/list_ops.c 
 
 all: $(TARGET)
 
